@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "337869083535",
+    "firebase_url": "https://funky-fotos.firebaseio.com",
+    "project_id": "funky-fotos",
+    "storage_bucket": "funky-fotos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337869083535:android:a30e1bea5f1b8ea3",
+        "android_client_info": {
+          "package_name": "com.appfest.funkyfotos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337869083535-jrn4h73u23l3cseuv8qutm7uc7utacnd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appfest.funkyfotos",
+            "certificate_hash": "ec44361af5ca72a5b39099f8d1e58111f49f59e6"
+          }
+        },
+        {
+          "client_id": "337869083535-f9hfrfn0tqh3iub5of1auaqvqlfk63t6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX3v4aUnf5MimRty2IN2zzyxtsfU3C0Eo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337869083535-f9hfrfn0tqh3iub5of1auaqvqlfk63t6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
