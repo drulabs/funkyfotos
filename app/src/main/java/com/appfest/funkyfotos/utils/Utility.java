@@ -31,6 +31,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * Authored by KaushalD on 8/27/2016.
@@ -38,6 +39,14 @@ import java.util.Date;
 public class Utility {
 
     private static final String MIME_IMAGE = "image/*";
+
+    public static int randomNumber(int n) {
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(n) + 1;
+        if (randomNumber == n)
+            randomNumber--;
+        return randomNumber;
+    }
 
     public static boolean isSmiling(Context context, Uri uri) {
 

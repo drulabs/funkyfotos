@@ -50,9 +50,14 @@ public interface Constants {
     String POEMS_DB = "poems";
     String POEMS_PUBLISH_DATE = "publishDate";
 
-    String[] funckySmileComments = {"Try again... still waiting for charming face",
+    String[] funkySmileComments = {"Try again... still waiting for charming face",
             "Smile…It confuses people..!!",
             "Is that a smile ?? I don't think so",
             "My dog smiles better than that",
             "Don't ever do that again. I am begging you"};
+    String[] funkySadComments = {"Why so serious?",
+            "What's with the face ?",
+            "No poop today. Huh !!!",
+            "Who died ?",
+            "Told you NOT to watch twilight."};
 }
