@@ -99,7 +99,9 @@ public class AddPicHandler {
 
         boolean isSmiling = Utility.isSmiling(context, image);
 
-        String funkyComment = isSmiling ? "smiling" : "sad";
+        String funkyComment = isSmiling ? Constants.funkySmileComments[Utility.randomNumber
+                (Constants.funkySmileComments.length)] : Constants.funkySadComments[Utility
+                .randomNumber(Constants.funkySadComments.length)];
 
         picture.setFunckyComment(funkyComment);
 
