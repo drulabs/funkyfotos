@@ -49,6 +49,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
             return;
         }
 
+
+
         initializeUIElements();
 
         PresenterCreator.createLoginPresenter(this, this);
@@ -72,6 +74,15 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
         mPresenter.start();
         mPresenter.fetchWelcomeImageIn(imgLogin);
         mPresenter.requestSDCardPermission();
+
+        // Login shortcut
+        String username = getIntent().getStringExtra("userName");
+        String pwd = getIntent().getStringExtra("password");
+        //mPresenter.handleLogin(username, pwd);
+        etUserName.setText(username);
+        etPassword.setText(pwd);
+        signInButton.setVisibility(View.GONE);
+        signInButton.performClick();
     }
 
     @Override

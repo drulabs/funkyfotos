@@ -93,6 +93,7 @@
             android:layout_marginRight="@dimen/margin_regular"
             android:layout_marginTop="@dimen/margin_regular"
             android:layout_weight="1"
+            android:visibility="gone"
             android:gravity="end|right|center_vertical"
             android:text="@string/txt_request_access"/>
 

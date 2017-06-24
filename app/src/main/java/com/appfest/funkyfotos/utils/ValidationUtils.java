@@ -14,7 +14,7 @@ public class ValidationUtils {
 
     public static boolean isValidUserName(String username) {
         boolean isValid = username != null && username.trim().length() >= Constants
-                .MIN_USERNAME_LENGTH && username.matches(ALPHA_NUMERIC_REGEX);
+                .MIN_USERNAME_LENGTH /*&& username.matches(ALPHA_NUMERIC_REGEX)*/;
         return isValid;
     }
 
