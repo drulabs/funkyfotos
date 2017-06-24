@@ -77,7 +77,7 @@ public class Comment implements Comparable<Comment> {
 
         Comment comment = (Comment) o;
 
-        return commentId.equals(comment.commentId);
+        return commentId != null?commentId.equals(comment.commentId):false;
 
     }
 

@@ -2,6 +2,7 @@ package com.appfest.funkyfotos.firebase;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.appfest.funkyfotos.config.Constants;
 import com.appfest.funkyfotos.dto.Comment;
@@ -24,6 +25,7 @@ import java.util.List;
 public class CommentsHandler {
 
     private static final int BATCH_SIZE = 10;
+    private static final String TAG = CommentsHandler.class.getSimpleName();
 
     private long lastTimestamp = System.currentTimeMillis();
     private boolean hasMoreComments = true;
@@ -40,7 +42,7 @@ public class CommentsHandler {
         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
             if (dataSnapshot != null && dataSnapshot.hasChildren()) {
                 Comment singleComment = dataSnapshot.getValue(Comment.class);
-                singleComment.setCommenterId(dataSnapshot.getKey());
+                singleComment.setCommentId(dataSnapshot.getKey());
                 callback.onCommentFetched(singleComment);
             } else {
                 callback.onError();
@@ -49,6 +51,7 @@ public class CommentsHandler {
 
         @Override
         public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+            Log.d(TAG, "onChildChanged() called with: dataSnapshot = [" + dataSnapshot + "], s = [" + s + "]");
             if (dataSnapshot != null && dataSnapshot.hasChildren()) {
                 Comment modifiedComment = dataSnapshot.getValue(Comment.class);
                 modifiedComment.setCommentId(dataSnapshot.getKey());
