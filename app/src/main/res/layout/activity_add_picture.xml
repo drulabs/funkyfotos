@@ -11,7 +11,7 @@
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
               android:weightSum="16"
-              tools:context="org.drulabs.vividvidhi.add.AddPicture">
+              tools:context="com.appfest.funkyfotos.add.AddPicture">
 
     <!--<LinearLayout-->
     <!--android:layout_width="match_parent"-->
@@ -29,7 +29,7 @@
         android:src="@mipmap/ic_camera_plus"
         tools:src="@drawable/sample_vivi"/>
 
-    <org.drulabs.vividvidhi.ui.DruEditText
+    <com.appfest.funkyfotos.ui.DruEditText
         android:id="@+id/add_pic_timestamp"
         style="@style/text_input_regular"
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
         android:hint="@string/add_pic_timestamp"
         android:maxLines="1"/>
 
-    <org.drulabs.vividvidhi.ui.DruEditText
+    <com.appfest.funkyfotos.ui.DruEditText
         android:id="@+id/add_pic_photographer"
         style="@style/text_input_regular"
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
         android:hint="@string/add_pic_photographer"
         android:maxLines="1"/>
 
-    <org.drulabs.vividvidhi.ui.DruEditText
+    <com.appfest.funkyfotos.ui.DruEditText
         android:id="@+id/add_pic_relationship"
         style="@style/text_input_regular"
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
         android:hint="@string/add_pic_relationship"
         android:maxLines="1"/>
 
-    <org.drulabs.vividvidhi.ui.DruEditText
+    <com.appfest.funkyfotos.ui.DruEditText
         android:id="@+id/add_pic_comment"
         style="@style/text_input_regular"
         android:layout_width="match_parent"

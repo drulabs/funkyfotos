@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "org.drulabs.vividvidhi"
+        applicationId "com.appfest.funkyfotos"
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 2
@@ -30,7 +30,6 @@ dependencies {
     //compile 'com.google.firebase:firebase-analytics:9.4.0'
     // FirebaseUI Storage only
     // circular image view
-    compile project(':ttl')
 
     compile 'com.google.android.gms:play-services-auth:10.0.1'
 

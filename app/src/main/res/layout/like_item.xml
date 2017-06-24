@@ -35,7 +35,7 @@
                 android:layout_margin="@dimen/margin_medium"
                 android:orientation="vertical">
 
-                <org.drulabs.vividvidhi.ui.DruTextView
+                <com.appfest.funkyfotos.ui.DruTextView
                     android:id="@+id/liked_by"
                     style="@style/like_text"
                     android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                     android:gravity="center_vertical"
                     tools:text="Kaushal commented on"/>
 
-                <org.drulabs.vividvidhi.ui.DruTextView
+                <com.appfest.funkyfotos.ui.DruTextView
                     android:id="@+id/liked_on"
                     style="@style/like_timestamp"
                     android:layout_width="match_parent"

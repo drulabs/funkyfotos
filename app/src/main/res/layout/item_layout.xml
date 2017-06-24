@@ -19,7 +19,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="org.drulabs.vividvidhi.landing.LandingPage">
+        tools:context="com.appfest.funkyfotos.landing.LandingPage">
 
         <FrameLayout
             android:id="@+id/image_item_holder"
@@ -37,7 +37,7 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_face_black_800dp"/>
 
-            <org.drulabs.vividvidhi.ui.DruTextView
+            <com.appfest.funkyfotos.ui.DruTextView
                 android:id="@+id/txt_image_credit"
                 style="@style/comment_text"
                 android:layout_width="match_parent"

@@ -11,7 +11,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="org.drulabs.vividvidhi.login.ReqAccessActivity">
+    tools:context="com.appfest.funkyfotos.login.ReqAccessActivity">
 
     <LinearLayout
         android:id="@+id/req_access_holder"
@@ -35,7 +35,7 @@
             android:layout_height="0dp"
             android:layout_weight="2">
 
-            <org.drulabs.vividvidhi.ui.DruTextInputEditText
+            <com.appfest.funkyfotos.ui.DruTextInputEditText
                 android:id="@+id/req_access_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_height="0dp"
             android:layout_weight="2">
 
-            <org.drulabs.vividvidhi.ui.DruTextInputEditText
+            <com.appfest.funkyfotos.ui.DruTextInputEditText
                 android:id="@+id/req_access_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
             android:layout_height="0dp"
             android:layout_weight="2">
 
-            <org.drulabs.vividvidhi.ui.DruTextInputEditText
+            <com.appfest.funkyfotos.ui.DruTextInputEditText
                 android:id="@+id/req_access_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             android:layout_height="0dp"
             android:layout_weight="2">
 
-            <org.drulabs.vividvidhi.ui.DruTextInputEditText
+            <com.appfest.funkyfotos.ui.DruTextInputEditText
                 android:id="@+id/req_access_relationship"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
         <!--android:layout_weight="1"-->
         <!--android:visibility="invisible"/>-->
 
-        <org.drulabs.vividvidhi.ui.DruButton
+        <com.appfest.funkyfotos.ui.DruButton
             android:id="@+id/req_access_action"
             android:layout_width="match_parent"
             android:layout_height="0dp"

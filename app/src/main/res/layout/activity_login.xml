@@ -11,7 +11,7 @@
               android:paddingLeft="@dimen/activity_horizontal_margin"
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
-              tools:context="org.drulabs.vividvidhi.login.LoginActivity">
+              tools:context="com.appfest.funkyfotos.login.LoginActivity">
 
     <!-- Login progress -->
     <ProgressBar
@@ -49,7 +49,7 @@
             android:layout_height="0dp"
             android:layout_weight="2">
 
-            <org.drulabs.vividvidhi.ui.DruTextInputEditText
+            <com.appfest.funkyfotos.ui.DruTextInputEditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
             android:layout_height="0dp"
             android:layout_weight="2">
 
-            <org.drulabs.vividvidhi.ui.DruTextInputEditText
+            <com.appfest.funkyfotos.ui.DruTextInputEditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <org.drulabs.vividvidhi.ui.DruButton
+        <com.appfest.funkyfotos.ui.DruButton
             android:id="@+id/email_sign_in_button"
             style="@style/ButtonBigBlue"
             android:layout_width="match_parent"
@@ -84,7 +84,7 @@
             android:text="@string/action_sign_in"
             android:textStyle="bold"/>
 
-        <org.drulabs.vividvidhi.ui.DruTextView
+        <com.appfest.funkyfotos.ui.DruTextView
             android:id="@+id/request_access"
             style="@style/request_access_style"
             android:layout_width="match_parent"
