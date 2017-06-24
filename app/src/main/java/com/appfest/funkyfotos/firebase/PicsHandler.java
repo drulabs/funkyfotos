@@ -28,7 +28,7 @@ import java.util.List;
 
 public class PicsHandler {
 
-    private static final int BATCH_SIZE = 3;
+    private static final int BATCH_SIZE = 8;
 
     private long lastTimestamp = System.currentTimeMillis();
     private boolean hasMorePics = true;
