@@ -60,7 +60,7 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(Constants.GOOGLE_CLIENT_ID)
+                .requestIdToken(getString(R.string.default_web_client_id))
 //                .requestScopes(new Scope(Scopes.PROFILE))
 //                .requestScopes(new Scope(Scopes.PLUS_ME))
 //                .requestScopes(new Scope(Scopes.PLUS_LOGIN))
