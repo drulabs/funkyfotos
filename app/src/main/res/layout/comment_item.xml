@@ -35,7 +35,7 @@
                 android:layout_margin="@dimen/margin_medium"
                 android:orientation="vertical">
 
-                <org.drulabs.vividvidhi.ui.DruTextView
+                <com.appfest.funkyfotos.ui.DruTextView
                     android:id="@+id/commenter_name"
                     style="@style/timestamp_comment"
                     android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                     android:gravity="center_vertical"
                     tools:text="Kaushal commented on"/>
 
-                <org.drulabs.vividvidhi.ui.DruTextView
+                <com.appfest.funkyfotos.ui.DruTextView
                     android:id="@+id/comment_timestamp"
                     style="@style/timestamp_comment"
                     android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                     android:gravity="center_vertical"
                     tools:text="Dec-08-2016, 12:23:43"/>
 
-                <org.drulabs.vividvidhi.ui.DruTextView
+                <com.appfest.funkyfotos.ui.DruTextView
                     android:id="@+id/comment_text"
                     style="@style/comment_text"
                     android:layout_width="match_parent"

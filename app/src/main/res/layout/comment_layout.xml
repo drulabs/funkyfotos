@@ -10,7 +10,7 @@
              android:paddingLeft="@dimen/activity_horizontal_margin"
              android:paddingRight="@dimen/activity_horizontal_margin"
              android:paddingTop="@dimen/activity_vertical_margin"
-             tools:context="org.drulabs.vividvidhi.landing.LandingPage">
+             tools:context="com.appfest.funkyfotos.landing.LandingPage">
 
     <RelativeLayout
         android:id="@+id/comment_layout_base"
@@ -33,7 +33,7 @@
 
             </android.support.v7.widget.RecyclerView>
 
-            <org.drulabs.vividvidhi.ui.DruTextView
+            <com.appfest.funkyfotos.ui.DruTextView
                 style="@style/comment_text_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
 
         </FrameLayout>
 
-        <org.drulabs.vividvidhi.ui.DruEditText
+        <com.appfest.funkyfotos.ui.DruEditText
             android:id="@+id/txt_comment"
             style="@style/text_input_regular"
             android:layout_width="match_parent"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"/>
 
-        <org.drulabs.vividvidhi.ui.DruTextView
+        <com.appfest.funkyfotos.ui.DruTextView
             style="@style/comment_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

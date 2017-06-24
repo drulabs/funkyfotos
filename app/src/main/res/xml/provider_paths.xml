@@ -2,7 +2,7 @@
 <paths>
     <external-path
         name="vivi"
-        path="Android/data/org.drulabs.vividvidhi/files/Pictures/"/>
+        path="Android/data/com.appfest.funkyfotos/files/Pictures/"/>
     <external-path
         name="external_files"
         path="."/>

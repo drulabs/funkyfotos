@@ -19,9 +19,9 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="org.drulabs.vividvidhi.landing.LandingPage">
+        tools:context="com.appfest.funkyfotos.landing.LandingPage">
 
-        <org.drulabs.vividvidhi.ui.DruTextView
+        <com.appfest.funkyfotos.ui.DruTextView
             android:id="@+id/txt_the_title"
             style="@style/title_poem"
             layout_alignParentTop="true"
@@ -48,7 +48,7 @@
                 android:src="@drawable/ic_face_black_800dp"
                 tools:src="@drawable/sample_vivi"/>
 
-            <org.drulabs.vividvidhi.ui.DruTextView
+            <com.appfest.funkyfotos.ui.DruTextView
                 android:id="@+id/txt_image_credit"
                 style="@style/comment_text"
                 android:layout_width="match_parent"
@@ -69,7 +69,7 @@
             android:layout_marginTop="@dimen/margin_regular"
             android:background="@drawable/image_gradient_overlay">
 
-            <org.drulabs.vividvidhi.ui.DruTextView
+            <com.appfest.funkyfotos.ui.DruTextView
                 android:id="@+id/txt_the_poem"
                 style="@style/text_poem"
                 android:layout_width="match_parent"
