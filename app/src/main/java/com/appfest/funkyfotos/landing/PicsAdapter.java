@@ -9,17 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.appfest.funkyfotos.db.DBHandler;
-
 import com.appfest.funkyfotos.R;
-
+import com.appfest.funkyfotos.db.DBHandler;
 import com.appfest.funkyfotos.dto.Picture;
 import com.appfest.funkyfotos.firebase.FirebaseImageHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -118,8 +115,13 @@ public class PicsAdapter extends RecyclerView.Adapter<PicsAdapter.PicsVH> {
 
             likes.setText(String.valueOf(pic.getLikesCount()));
             comments.setText(String.valueOf(pic.getCommentsCount()));
-            imageDetails.setText(pic.getPhotoCredit() + " (" + pic.getRelationshipWithPhotographer
-                    () + ")" + "\n" + dateFormat.format(new Date(pic.getDateTaken())));
+            //imageDetails.setText(pic.getPhotoCredit() + " (" + pic.getRelationshipWithPhotographer
+            //        () + ")" + "\n" + dateFormat.format(new Date(pic.getDateTaken())));
+
+            imageDetails.setText(pic.getFunckyComment());
+
+            //if (Utility.isSmiling())
+
 
 //            FirebaseImageHelper.loadImageWithThumbnail(mContext, pic.getPicURL(), pic.getThumbURL
 //                    (), image);

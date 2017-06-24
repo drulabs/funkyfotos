@@ -12,6 +12,7 @@ public class Picture implements Comparable<Picture> {
     private int likesCount;
     private String photoCredit;
     private String relationshipWithPhotographer;
+    private String funckyComment;
     private String picURL;
     private String thumbURL;
 
@@ -57,6 +58,14 @@ public class Picture implements Comparable<Picture> {
 
     public String getRelationshipWithPhotographer() {
         return relationshipWithPhotographer;
+    }
+
+    public String getFunckyComment() {
+        return funckyComment;
+    }
+
+    public void setFunckyComment(String funckyComment) {
+        this.funckyComment = funckyComment;
     }
 
     public void setRelationshipWithPhotographer(String relationshipWithPhotographer) {
