@@ -10,6 +10,7 @@
 bin/
 gen/
 out/
+*.swp
 # Gradle files
 .gradle/
 build/
@@ -29,6 +30,7 @@ captures/
 .idea/tasks.xml
 .idea/gradle.xml
 .idea/libraries
+.idea/*
 # Keystore files
 *.jks
 # External native build folder generated in Android Studio 2.2 and later

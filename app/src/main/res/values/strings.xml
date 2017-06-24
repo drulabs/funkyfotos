@@ -35,7 +35,7 @@
         length</string>
     <string name="already_registered_msg">You are already a registered user. Login with your credentials.</string>
     <string name="something_went_wrong">Something went wrong. Please try again later</string>
-    <string name="required_permission_denied">This permission is required for app to function</string>
+    <string name="required_permission_denied">SD Card write permission is required for app to function.</string>
     <string name="empty_username_msg">Please enter username before adding profile pic</string>
     <string name="no_camera_found">No camera support found</string>
     <string name="no_profile_pic">Please add a profile pic to continue</string>
@@ -78,7 +78,7 @@
     <string name="commented_on_suffix">commented on</string>
     <string name="created_on_text">Created on</string>
     <string name="no_more_poems_available">No more poems are available at this moment.</string>
-    <string name="sign_in_text">Sign in using any of the following service</string>
+    <string name="sign_in_text">Sign in with your google account.</string>
     <string name="logging_in">Logging in...</string>
     <string name="account_suspended_msg">Your account has been suspended by administrator. Please request access from login page.</string>
     <string name="no_likes_found">No more likes for this artifact</string>

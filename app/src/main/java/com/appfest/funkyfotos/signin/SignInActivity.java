@@ -1,7 +1,9 @@
 package com.appfest.funkyfotos.signin;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.appfest.funkyfotos.utils.Utility;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -95,7 +98,37 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
         store = Store.getInstance(SignInActivity.this);
         dialog = new ProgressDialog(this);
         dialog.setMessage(getString(R.string.loading_please_wait));
+        requestSDCardPermission();
     }
+
+    private static final int SD_CARD_REQ_CODE = 12;
+    public void requestSDCardPermission() {
+        boolean isSDPermissionGranted = Utility.checkPermission(Manifest.permission
+                .WRITE_EXTERNAL_STORAGE, this);
+        if (!isSDPermissionGranted) {
+            Utility.requestPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    SD_CARD_REQ_CODE, this);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        if (requestCode == SD_CARD_REQ_CODE) {
+            if (Manifest.permission.WRITE_EXTERNAL_STORAGE.equalsIgnoreCase(permissions[0]) &&
+                    grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                destroyWithMessage(this.getString(R.string.required_permission_denied));
+            }
+        }
+    }
+
+    public void destroyWithMessage(String message) {
+        if (message != null && !message.isEmpty()) {
+            NotificationToast.showToast(this, message);
+        }
+        finish();
+    }
+
 
     @Override
     public void onStart() {
@@ -166,11 +199,20 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                             if (dialog.isShowing()) {
                                 dialog.dismiss();
                             }
-                            startActivity(new Intent(SignInActivity.this, LoginActivity.class));
+
+                            //startActivity(new Intent(SignInActivity.this, LoginActivity.class));
+
                             finish();
                         }
                     }
                 });
+    }
+
+    private void loginShortcut(String userName, String password){
+        Intent intent = new Intent(SignInActivity.this, LoginActivity.class);
+        intent.putExtra("userName", userName);
+        intent.putExtra("password", password);
+        startActivity(intent);
     }
 
     private void saveGoogleUser(GoogleSignInAccount acct) {
@@ -194,6 +236,8 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
         store.setUserEmail(userEmail);
         store.setMyName(userName);
         store.setFirebasePicUrl(picURL);
+
+        loginShortcut(userEmail, "123456");
     }
 
     @Override

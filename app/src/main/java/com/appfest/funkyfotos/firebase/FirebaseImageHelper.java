@@ -79,12 +79,19 @@ public class FirebaseImageHelper {
     }
 
     public static void loadImageIn(Activity activity, Uri imageUri, ImageView img) {
-        Glide.with(activity)
-                .load(imageUri.toString())
-                .error(R.drawable.ic_face_black_800dp)
-                .placeholder(R.drawable.ic_face_black_800dp)
-                .animate(R.anim.fade_in)
-                .into(img);
+        try {
+            if(activity != null) {
+                Glide.with(activity)
+                        .load(imageUri.toString())
+                        .error(R.drawable.ic_face_black_800dp)
+                        .placeholder(R.drawable.ic_face_black_800dp)
+                        .animate(R.anim.fade_in)
+                        .into(img);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
 //    public static void loadImageWithThumbnail(final Context context, String imageURL,

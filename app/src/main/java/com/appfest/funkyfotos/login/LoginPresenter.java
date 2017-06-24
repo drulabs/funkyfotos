@@ -61,7 +61,7 @@ public class LoginPresenter implements LoginContract.Presenter, LoginHandler.Log
             @Override
             public void onDownloadURIFetched(Uri downloadUri) {
 
-                FirebaseImageHelper.loadImageIn(activity, downloadUri, imageView);
+                //FirebaseImageHelper.loadImageIn(activity, downloadUri, imageView);
             }
 
             @Override

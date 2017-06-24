@@ -71,7 +71,7 @@ public class Utility {
             facingProb = face.getIsSmilingProbability();
         }
 
-        return (facingProb > 0.2);
+        return (facingProb < 0.2);
 //            return "Smiling speaks to people charmingly without saying a word";
 //        } else {
 //            return "Silence is the most powerful scream.";
@@ -94,7 +94,7 @@ public class Utility {
             facingProb = face.getIsSmilingProbability();
         }
 
-        return (facingProb > 0.2);
+        return (facingProb < 0.2);
 //            return "Smiling speaks to people charmingly without saying a word";
 //        } else {
 //            return "Silence is the most powerful scream.";

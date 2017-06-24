@@ -12,6 +12,15 @@ public class Comment implements Comparable<Comment> {
     private String commenterId;
     private String text;
     private long timestamp;
+    private String commentId;
+
+    public String getCommentId() {
+        return commentId;
+    }
+
+    public void setCommentId(String commentId) {
+        this.commentId = commentId;
+    }
 
     public String getArtifactId() {
         return artifactId;
@@ -68,12 +77,7 @@ public class Comment implements Comparable<Comment> {
 
         Comment comment = (Comment) o;
 
-        if (timestamp != comment.timestamp) return false;
-        if (!artifactId.equals(comment.artifactId)) return false;
-        if (!commenter.equals(comment.commenter)) return false;
-        if (commenterPic != null ? !commenterPic.equals(comment.commenterPic) : comment.commenterPic != null)
-            return false;
-        return text.equals(comment.text);
+        return commentId != null?commentId.equals(comment.commentId):false;
 
     }
 

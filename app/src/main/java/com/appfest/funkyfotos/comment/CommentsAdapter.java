@@ -66,6 +66,11 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Commen
 
     void append(Comment comment) {
         if (comments != null && comments.size() >= 0 && comment != null) {
+
+            if (comments.contains(comment)) {
+                comments.remove(comment);
+            }
+
             this.comments.add(comment);
             Collections.sort(this.comments);
             this.notifyDataSetChanged();
