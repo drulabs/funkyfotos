@@ -53,6 +53,7 @@ dependencies {
     compile 'com.android.support:palette-v7:25.2.0'
 
     compile 'com.theartofdev.edmodo:android-image-cropper:2.3.+'
+    compile 'com.google.android.gms:play-services-vision:10.0.1'
     // test junit dependency
     testCompile 'junit:junit:4.12'
 }

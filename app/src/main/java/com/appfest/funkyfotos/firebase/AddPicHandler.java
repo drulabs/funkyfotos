@@ -9,6 +9,7 @@ import com.appfest.funkyfotos.config.Constants;
 import com.appfest.funkyfotos.dto.Comment;
 import com.appfest.funkyfotos.dto.Picture;
 import com.appfest.funkyfotos.utils.Store;
+import com.appfest.funkyfotos.utils.Utility;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
@@ -95,6 +96,12 @@ public class AddPicHandler {
                 }
             });
         }
+
+        boolean isSmiling = Utility.isSmiling(context, image);
+
+        String funkyComment = isSmiling ? "smiling" : "sad";
+
+        picture.setFunckyComment(funkyComment);
 
         // uploading picture metadata
         //String picKey = picsDB.push().getKey();

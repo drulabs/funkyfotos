@@ -18,14 +18,17 @@ import android.support.v7.app.AlertDialog;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
-
-import com.appfest.funkyfotos.config.Constants;
+import android.util.SparseArray;
 
 import com.appfest.funkyfotos.R;
-
+import com.appfest.funkyfotos.config.Constants;
 import com.appfest.funkyfotos.ui.NotificationToast;
+import com.google.android.gms.vision.Frame;
+import com.google.android.gms.vision.face.Face;
+import com.google.android.gms.vision.face.FaceDetector;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -35,6 +38,60 @@ import java.util.Date;
 public class Utility {
 
     private static final String MIME_IMAGE = "image/*";
+
+    public static boolean isSmiling(Context context, Uri uri) {
+
+        Bitmap bitmap = null;
+        try {
+            bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), uri);
+        } catch (IOException e) {
+            e.printStackTrace();
+            //return "Try again... still waiting for charming face";
+            return false;
+        }
+        float facingProb = 0;
+        FaceDetector detector = new FaceDetector.Builder(context)
+                .setTrackingEnabled(false)
+                .setLandmarkType(FaceDetector.ALL_LANDMARKS)
+                .build();
+        Frame frame = new Frame.Builder().setBitmap(bitmap).build();
+        SparseArray<Face> faces = detector.detect(frame);
+
+        if (faces.size() > 0) {
+            Face face = faces.valueAt(0);
+            facingProb = face.getIsSmilingProbability();
+        }
+
+        return (facingProb > 0.2);
+//            return "Smiling speaks to people charmingly without saying a word";
+//        } else {
+//            return "Silence is the most powerful scream.";
+//        }
+
+    }
+
+    public static boolean isSmiling(Context context, Bitmap bitmap) {
+
+        float facingProb = 0;
+        FaceDetector detector = new FaceDetector.Builder(context)
+                .setTrackingEnabled(false)
+                .setLandmarkType(FaceDetector.ALL_LANDMARKS)
+                .build();
+        Frame frame = new Frame.Builder().setBitmap(bitmap).build();
+        SparseArray<Face> faces = detector.detect(frame);
+
+        if (faces.size() > 0) {
+            Face face = faces.valueAt(0);
+            facingProb = face.getIsSmilingProbability();
+        }
+
+        return (facingProb > 0.2);
+//            return "Smiling speaks to people charmingly without saying a word";
+//        } else {
+//            return "Silence is the most powerful scream.";
+//        }
+
+    }
 
     public static void requestPermission(String strPermission, int perCode, Activity activity) {
         if (ActivityCompat.shouldShowRequestPermissionRationale(activity, strPermission)) {
@@ -226,9 +283,9 @@ public class Utility {
     }
 
     @SuppressWarnings("deprecation")
-    public static Spanned getSpannedFromHtml(String html){
+    public static Spanned getSpannedFromHtml(String html) {
 
-        if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.M){
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.M) {
             return Html.fromHtml(html);
         } else {
             return Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);

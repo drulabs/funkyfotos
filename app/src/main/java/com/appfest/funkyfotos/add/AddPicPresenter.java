@@ -54,7 +54,7 @@ public class AddPicPresenter implements AddPicContract.Presenter, AddPicHandler.
     public void saveData(Picture picture, String comment) {
         if (picture.getPicName() == null || picture.getDateTaken() == 0 || picture.getPhotoCredit()
                 == null || picture.getRelationshipWithPhotographer() == null || comment == null
-                || comment.isEmpty() || imageBitmap == null || thumbnail == null) {
+                || imageBitmap == null || thumbnail == null) {
             view.onColumnEmpty();
             return;
         }

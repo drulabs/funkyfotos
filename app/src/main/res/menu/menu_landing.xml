@@ -6,10 +6,6 @@
         android:title="@string/text_picture"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/only_poems"
-        android:title="@string/text_poems"
-        app:showAsAction="never"/>
-    <item
         android:id="@+id/only_videos"
         android:title="@string/text_videos"
         app:showAsAction="never"/>
