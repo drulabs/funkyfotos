@@ -9,7 +9,8 @@ public interface Constants {
     String FILE_PROVIDER_AUTHORITY = "com.appfest.funkyfotos.provider";
 
     // google constants
-    String GOOGLE_CLIENT_ID = "560496245142-j6rabe001bm25r159m1ifft22iuc34lo.apps.googleusercontent.com";
+    String GOOGLE_CLIENT_ID = "206905092794-p0pkgtdhsbvpu7jrlee5oe3np1qh4dkr.apps.googleusercontent.com";
+    //"560496245142-j6rabe001bm25r159m1ifft22iuc34lo.apps.googleusercontent.com";
 
     int MIN_USERNAME_LENGTH = 6;
     int MIN_NAME_LENGTH = 5;
@@ -26,7 +27,7 @@ public interface Constants {
     String UB_FIREBASE_PIC = "firebasePicUrl";
     String UB_USER_EMAIL = "userEmail";
 
-    String IMAGE_BUCKET = "vivid-vidhi.appspot.com";
+    String IMAGE_BUCKET = "funky-fotos.appspot.com";
     String USER_IMAGE_FOLDER = "user_images";
 
     // Image processing related
